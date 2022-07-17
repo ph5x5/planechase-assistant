@@ -1,5 +1,6 @@
 import os
 import django_heroku
+from decouple import config
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -14,7 +15,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-SECRET_KEY = "somesecretkey"
+SECRET_KEY = config('SECRET_KEY')
 
 # Application definition
 
