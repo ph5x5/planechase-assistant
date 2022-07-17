@@ -1,0 +1,10 @@
+{
+    "name": "Planechase Assistant",
+    "description": "An application which helps playing random planechase.",
+    "image": "heroku/python",
+    "repository": "https://github.com/ph5x5/planechase-assistant",
+    "keywords": ["mtg", "planechase" ],
+    "addons": [],
+    "env": {},
+    "environments": {}
+  }
