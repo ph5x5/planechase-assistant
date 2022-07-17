@@ -1,9 +1,11 @@
 {% block content %}
 
 <div>
-    <h1>
+    {% if not error %}
         <img src ="{{ image_url }}" alt="Plane picture">
-    </h1>
+    {% else %}
+        {{ error }}
+    {% endif %}
 </div>
 
 {% endblock %}
