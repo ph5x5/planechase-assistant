@@ -9,7 +9,7 @@ def get_card_list():
     try:
         response = requests.get(url)
         card_list = response.json()['data']
-    except e:
+    except Exception as e:
         error = f"Can't access the Scryfall API: {e}"
         card_list = []
     return card_list, error
@@ -21,7 +21,7 @@ def get_card_image_url(number):
     if not error:
         try:
             image_url = card_list[number - 1]['image_uris']['normal']
-        except e:
+        except Exception as e:
             error = f"Can't get the information from the Scryfall response: {e}"
             image_url = ''
     return image_url, error
