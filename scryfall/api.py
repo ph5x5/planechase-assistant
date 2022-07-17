@@ -17,7 +17,7 @@ def get_card_list():
 
 def get_card_image_url(number):
     error = ''
-    card_list, error = self.get_card_list()
+    card_list, error = get_card_list()
     if not error:
         try:
             image_url = card_list[number - 1]['image_uris']['normal']
