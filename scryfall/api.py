@@ -11,17 +11,22 @@ def get_card_list():
         card_list = response.json()['data']
     except Exception as e:
         error = f"Can't access the Scryfall API: {e}"
-        card_list = []
+        return [], error
     return card_list, error
 
 
-def get_card_image_url(number):
+def get_card_image_url(number_string):
     error = ''
+    try:
+        number = int(number_string)
+    except Exception as e:
+        error = f"Can't convert pointed number to integer: {e}"
+        return '', error
     card_list, error = get_card_list()
     if not error:
         try:
             image_url = card_list[number - 1]['image_uris']['normal']
         except Exception as e:
             error = f"Can't get the information from the Scryfall response: {e}"
-            image_url = ''
+            return '', error
     return image_url, error
