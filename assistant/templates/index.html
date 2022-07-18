@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" type="text/css">
 </head>
 <body>
-    <div class="rotate_image">
-        {% if not error %}
+    {% if not error %}
+        <div class="rotate_image">
             <img src ="{{ image_url }}" alt="Plane picture">
-        {% else %}
+        </div>
+    {% else %}
+        <div>
             {{ error }}
-        {% endif %}
-    </div>
+        </div>        
+    {% endif %}    
 </body>
 
 {% endblock %}
