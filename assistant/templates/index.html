@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" type="text/css">
 </head>
 <body>
-    <div>
+    <div class="rotate_image">
         {% if not error %}
-            <img src ="{{ image_url }}" alt="Plane picture" id="rotate_image">
+            <img src ="{{ image_url }}" alt="Plane picture">
         {% else %}
             {{ error }}
         {% endif %}
