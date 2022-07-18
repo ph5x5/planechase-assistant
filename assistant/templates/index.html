@@ -11,9 +11,7 @@
     <div class="container">
         <div class="plane">
             {% if not error %}
-                <div class="rotate_image">
-                    <img src ="{{ image_url }}" alt="Plane picture">
-                </div>
+                <img src ="{{ image_url }}" alt="Plane picture" class="rotate_image">
             {% else %}
                 <div>
                     {{ error }}
