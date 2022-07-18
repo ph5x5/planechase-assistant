@@ -6,21 +6,26 @@
     <meta charset="UTF-8">
     <title>Planechase Assistant</title>
     <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" type="text/css">
+    <script src="{% static 'js/dice.js'%}"></script>
 </head>
 <body>
     <div class="container">
+        <div class="top_element">
+            <a href="?random=true" class="button">Planeswalk</a>
+        </div>
+        <div class="top_element">
+            <a class="button" id="dice">Roll a Dice</a>
+        </div>
+        <p class="top_element" id="placeholder"></p>
         <div class="plane">
             <div>
                 {% if not error %}
-                    <img src ="{{ image_url }}" alt="Plane picture" class="card_image">
+                    <img src="{{ image_url }}" alt="Plane picture" class="card_image">
                 {% else %}
                     <div>
                         {{ error }}
                     </div>
                 {% endif %}
-            </div>
-            <div class="top_element">
-                <a href="?random=true" class="button">Planeswalk</a>
             </div>
         </div>
     </div>
