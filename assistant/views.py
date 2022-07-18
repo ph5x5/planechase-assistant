@@ -5,6 +5,8 @@ import random
 
 
 def index(request):
+    number = ''
+
     args = {}
     number = request.GET['number']
     random = request.GET['random']
