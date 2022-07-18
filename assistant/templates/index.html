@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" type="text/css">
 </head>
 <body>
-    {% if not error %}
-        <div class="rotate_image">
-            <img src ="{{ image_url }}" alt="Plane picture">
-        </div>
-    {% else %}
+    <div class="plane">
+        {% if not error %}
+            <div class="rotate_image">
+                <img src ="{{ image_url }}" alt="Plane picture">
+            </div>
+        {% else %}
+            <div>
+                {{ error }}
+            </div>
+        {% endif %}
         <div>
-            {{ error }}
+            <button class="planechase" formaction="{{ request.path }}?random=true">
+                Planechase
+            </button>
         </div>
-    {% endif %}
+    </div>
 </body>
 
 {% endblock %}
