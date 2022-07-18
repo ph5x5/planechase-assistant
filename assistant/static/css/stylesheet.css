@@ -14,3 +14,12 @@ a.button {
     text-decoration: none;
     color: initial;
 }
+
+.container {
+    position: relative;
+    width: 100%
+}
+
+.plane {
+    width: 80%;
+}
