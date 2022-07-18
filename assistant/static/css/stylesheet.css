@@ -21,7 +21,7 @@
     transform-origin: left top;
 }
 
-a.button {
+.button {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
@@ -56,4 +56,5 @@ a.button {
 
 .invert {
     filter: invert(1);
+    height: 90%;
 }
