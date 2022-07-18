@@ -21,4 +21,5 @@ def index(request):
         image_url, error = '', ''
     args['image_url'] = image_url
     args['error'] = error
+    args['request'] = request
     return render(request, "index.html", args)
