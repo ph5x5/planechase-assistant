@@ -1,4 +1,9 @@
 .card_image {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+
     -webkit-transform: translate(142%) rotate(90deg);
     -moz-transform: translate(142%) rotate(90deg);
     -ms-transform: translate(142%) rotate(90deg);
@@ -19,6 +24,11 @@ a.button {
 
     text-decoration: none;
     color: initial;
+}
+
+.container {
+    position: relative;
+    width: 100%
 }
 
 .plane {
