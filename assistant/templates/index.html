@@ -10,9 +10,9 @@
 <body>
     <div class="container">
         <div class="plane">
-            <div class="card_image">
+            <div>
                 {% if not error %}
-                    <img src ="{{ image_url }}" alt="Plane picture" class="rotate_image">
+                    <img src ="{{ image_url }}" alt="Plane picture" class="card_image">
                 {% else %}
                     <div>
                         {{ error }}
