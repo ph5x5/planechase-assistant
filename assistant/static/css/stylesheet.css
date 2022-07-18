@@ -1,85 +1,70 @@
 * {
+    box-sizing: border-box;
+}
+
+*:before,*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
     font-family: Helvetica, Arial, sans-serif;
 }
 
-.card_image {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-
-    -webkit-transform: translate(142%) rotate(90deg);
-    -moz-transform: translate(142%) rotate(90deg);
-    -ms-transform: translate(142%) rotate(90deg);
-    -o-transform: translate(142%) rotate(90deg);
-    transform: translate(142%) rotate(90deg);
-
-    -webkit-transform-origin: left top;
-    -moz-transform-origin: left top;
-    -ms-transform-origin: left top;
-    -o-transform-origin: left top;
-    transform-origin: left top;
-
-    max-width: 70vh;
-}
-
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    height: 2vw;
-
-    text-decoration: none;
-    color: white;
-}
-
-button.button {
-    background-color: rgb(82, 186, 179);
-    border-radius: 6px;
-    border: none;
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    text-transform: uppercase;
-    width: 200px;
-    cursor: pointer;
-    font-size: 2.5vh;
+body, td, th, input, textarea, select, a {
+    font-size: 16px;
 }
 
 .container {
-    position: relative;
-    width: 100%;
+    padding: 0 15px;
+}
+
+.main-menu {
+    margin: 0 0 30px;
+    padding: 15px 0;
     display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
-.plane {
-    width: 80%;
+.main-menu-item {
+    margin: 0 10px 0 0;
 }
 
-.top_element {
-    text-align: center;
-    width: 30%;
-    font-size: 2.2vw;
-    background-color: rgb(82, 186, 179);
+.main-menu-item:last-child {
+    margin: 0;
+}
+
+.main-menu-link {
+    padding: 15px 30px;
     border-radius: 6px;
-    border: none;
-    color: rgb(255, 255, 255);
+    display: block;
+    background-color: #52bab3;
+    color: #fff;
     text-transform: uppercase;
-    cursor: pointer;
-    margin: 1px;
+    text-decoration: none;
 }
 
-.top_output {
-    text-align: center;
-    width: 30%;
-    font-size: 2.2vw;
+.main-menu-link:hover, .main-menu-link:active, .main-menu-link:focus  {
+    text-decoration: none;
+}
+
+.container-image {
+    display: flex;
+    justify-content: center;
+}
+
+.img-responsible {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.main-menu-item-output {
     border: solid 3px rgb(82, 186, 179);
     border-radius: 6px;
     color: rgb(0, 0, 0);
-    text-transform: uppercase;
-    margin: 1px;
-}
-
-.invert {
-    height: 3vh;
 }

@@ -5,30 +5,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Planechase Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" type="text/css">
 </head>
 <body>
+    <div class="header">
+        <div class="container">
+            <ul class="main-menu">
+                <li class="main-menu-item">
+                    <a href="?random=true" class="main-menu-link">Planeswalk</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="#" class="main-menu-link">Roll a dice</a>
+                    <script src="{% static 'js/dice.js'%}"></script>
+                </li>
+                <li class="main-menu-item">
+                    <div class="main-menu-link main-menu-item-output" id="placeholder"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="container">
-        <div class="top_element">
-            <a href="?random=true" class="button">Planeswalk</a>
+        {% if not error %}
+        <div class="container-image">
+            <img src="{{ image_url }}" alt="Plane picture" class="card_image">
         </div>
-        <div class="top_element">
-            <button class="button" id="dice">Roll a dice</button>
-            <script src="{% static 'js/dice.js'%}"></script>
+        {% else %}
+        <div>
+            {{ error }}
         </div>
-        <div class="top_output" id="placeholder">
-        </div>
-        <div class="plane">
-            <div>
-                {% if not error %}
-                    <img src="{{ image_url }}" alt="Plane picture" class="card_image">
-                {% else %}
-                    <div>
-                        {{ error }}
-                    </div>
-                {% endif %}
-            </div>
-        </div>
+        {% endif %}
     </div>
 </body>
 {% endblock %}
