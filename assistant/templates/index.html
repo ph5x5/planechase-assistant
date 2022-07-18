@@ -10,16 +10,18 @@
 <body>
     <div class="container">
         <div class="plane">
-            {% if not error %}
-                <img src ="{{ image_url }}" alt="Plane picture" class="rotate_image">
-            {% else %}
-                <div>
-                    {{ error }}
-                </div>
-            {% endif %}
-        </div>
-        <div>
-            <a href="?random=true" class="button">Planechase</a>
+            <div class="card_image">
+                {% if not error %}
+                    <img src ="{{ image_url }}" alt="Plane picture" class="rotate_image">
+                {% else %}
+                    <div>
+                        {{ error }}
+                    </div>
+                {% endif %}
+            </div>
+            <div>
+                <a href="?random=true" class="button">Planechase</a>
+            </div>
         </div>
     </div>
 </body>
