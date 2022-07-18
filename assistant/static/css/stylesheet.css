@@ -44,7 +44,7 @@ a.button {
 
 .top_element {
     text-align: center;
-    width: 20%;
+    width: 30%;
     font-size: 2.2vw;
     background-color: rgb(82, 186, 179);
     border-radius: 6px;
@@ -52,4 +52,8 @@ a.button {
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.invert {
+    filter: invert(1);
 }

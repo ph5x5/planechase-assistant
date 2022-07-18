@@ -11,9 +11,9 @@ function printNumber(number) {
     if (( number == 2 || number == 3 || number == 4)) {
         placeholder.innerHTML = number;
     } else if (( number == 1)) {
-        placeholder.innerHTML = '<img src="/static/planeswalker.png">'
+        placeholder.innerHTML = '<img class="invert" src="/static/planeswalker.png">'
     } else if (( number == 6)) {
-        placeholder.innerHTML = '<img src="/static/chaos.png">'
+        placeholder.innerHTML = '<img class="invert" src="/static/chaos.png">'
     }
 }
 
