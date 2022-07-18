@@ -1,11 +1,20 @@
+{% load static %}
 {% block content %}
-
-<div>
-    {% if not error %}
-        <img src ="{{ image_url }}" alt="Plane picture">
-    {% else %}
-        {{ error }}
-    {% endif %}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Planechase Assistant</title>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" type="text/css">
+</head>
+<body>
+    <div>
+        {% if not error %}
+            <img src ="{{ image_url }}" alt="Plane picture" id="rotate_image">
+        {% else %}
+            {{ error }}
+        {% endif %}
+    </div>
+</body>
 
 {% endblock %}
