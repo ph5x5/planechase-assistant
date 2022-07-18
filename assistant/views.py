@@ -9,10 +9,10 @@ def index(request):
 
     args = {}
     number = request.GET['number']
-    random = request.GET['random']
+    get_random_plane = request.GET['random']
 
-    random_bool = bool(random)
-    if random:
+    get_random_plane_bool = bool(get_random_plane)
+    if get_random_plane_bool:
         number = random.randint(1, 86)
 
     if number:
