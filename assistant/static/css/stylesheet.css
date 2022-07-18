@@ -19,6 +19,8 @@
     -ms-transform-origin: left top;
     -o-transform-origin: left top;
     transform-origin: left top;
+
+    max-width: 100vh;
 }
 
 a.button {
