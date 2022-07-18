@@ -34,12 +34,12 @@ a.button {
 
 .container {
     position: relative;
-    width: 100%
+    width: 100%;
+    display: flex;
 }
 
 .plane {
     width: 80%;
-    display: flex;
 }
 
 .top_element {
