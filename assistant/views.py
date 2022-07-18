@@ -5,21 +5,26 @@ import random
 
 
 def index(request):
-    number = ''
+    error = ''
+    
+    number = request.GET.get('number', '')
+    get_random_plane = request.GET.get('random', 'false')
 
-    args = {}
-    number = request.GET['number']
-    get_random_plane = request.GET['random']
-
-    get_random_plane_bool = bool(get_random_plane)
-    if get_random_plane_bool:
-        number = random.randint(1, 86)
+    try:
+        get_random_plane_bool = bool(get_random_plane)
+        if get_random_plane_bool:
+            number = random.randint(1, 86)
+    except Exception as e:
+        error = f"Can't process the random parameter: {e}"   
 
     if number:
         image_url, error = api.get_card_image_url(number)
     else:
-        image_url, error = '', ''
-    args['image_url'] = image_url
-    args['error'] = error
-    args['request_path'] = request.path
+        image_url = ''
+
+    args = {
+        'image_url': image_url,
+        'error': error
+    }
+
     return render(request, "index.html", args)
