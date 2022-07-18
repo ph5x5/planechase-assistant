@@ -21,13 +21,19 @@
     transform-origin: left top;
 }
 
-.button {
+a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
 
     height: 2vw;
 
+    text-decoration: none;
+    color: white;
+}
+
+button.button {
+    height: 2vw;
     text-decoration: none;
     color: white;
 }
@@ -52,9 +58,10 @@
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     cursor: pointer;
+    margin: 1px;
 }
 
 .invert {
     filter: invert(1);
-    height: 90%;
+    height: 3vh;
 }
