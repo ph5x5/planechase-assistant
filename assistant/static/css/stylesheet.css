@@ -4,6 +4,9 @@
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
+    margin-left: 10%;
+    margin-block-start: -12%;
+    margin-block-end: -9%;
 }
 
 a.button {
