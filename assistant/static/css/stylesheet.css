@@ -55,6 +55,7 @@ body, td, th, input, textarea, select, a {
 
 .main-menu-img {
     height: 100%;
+    margin-left: 30px;
 }
 
 .home-conteiner-image-img {
@@ -82,4 +83,6 @@ body, td, th, input, textarea, select, a {
 .main-menu-number {
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
+    font-size: 38px;
+    margin-left: 30px;
 }
